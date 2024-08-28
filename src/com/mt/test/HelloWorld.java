@@ -79,13 +79,113 @@ public class HelloWorld {
         String lastName = "Islam";
         System.out.println(firstName.concat(lastName));
         
+        System.out.println("Max = "+Math.max(a, b));
+        System.out.println("Min = "+Math.min(a, b));
+        System.out.println("a Suare root = "+Math.sqrt(a));
+        System.out.println("Abs = "+Math.abs(-4.7));//returns the absolute (positive) value
+        System.out.println("Random number = "+Math.random());
+        int randomNum = (int)(Math.random() * 101);  // 0 to 100
+        System.out.println("Random number from 1 to 100 = "+randomNum);
+        
+        String result = (a < 18) ? "Good day." : "Good evening.";
+        System.out.println(result);
+        
+        int day = 4;
+        switch (day) {
+          case 1:
+            System.out.println("Monday");
+            break;
+          case 2:
+            System.out.println("Tuesday");
+            break;
+          case 3:
+            System.out.println("Wednesday");
+            break;
+          case 4:
+            System.out.println("Thursday");
+            break;
+          case 5:
+            System.out.println("Friday");
+            break;
+          case 6:
+            System.out.println("Saturday");
+            break;
+          case 7:
+            System.out.println("Sunday");
+            break;
+        }
+        
+        //sum from 1 to 20
+        int ii = 1;
+        int iiMax = 20;
+        int iSum = 0;
+        while(ii<=iiMax) {
+        	iSum += ii;
+        	ii++;
+        }
+        System.out.println("Sum from 1 to "+ iiMax +"="+ iSum);
+        ii = 1;
+        iSum = 0;
+        do {
+        	iSum += ii;
+        	ii++;
+        }while(ii<=iiMax);
+        System.out.println("Sum from 1 to "+ iiMax +"="+ iSum);
+        
+        String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+        for (String i : cars) {
+          System.out.println(i);
+        }
+        
+        //multi-dimentional array
+        int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+        for (int i = 0; i < myNumbers.length; ++i) {
+          for (int j = 0; j < myNumbers[i].length; ++j) {
+            System.out.println(myNumbers[i][j]);
+          }
+        }
+		
+        //call recursive
+        int resultr = sumrecursiveSum(10);
+        System.out.println("Recursive = "+resultr);
+        
+        //encapsulation example
+        PersonClass myObj = new PersonClass();
+        //myObj.name = "John";  // error
+        //System.out.println(myObj.name); // error
+        myObj.setName("Mojidul Islam"); // Set the value of the name variable to "John"
+        System.out.println(myObj.getName());
+        
         
 		
-		
-		
-	}
+	}	
+	
+	
+	public static int sumrecursiveSum(int k) {
+	    if (k > 0) {
+	      return k + sumrecursiveSum(k - 1);
+	    } else {
+	      return 0;
+	    }
+	  }
 
 }
+
+class PersonClass {
+	  private String name; // private = restricted access
+
+	  // Getter
+	  public String getName() {
+	    return name;
+	  }
+
+	  // Setter
+	  public void setName(String newName) {
+	    this.name = newName;
+	  }
+}
+
+
 /*
 public JTextFieldDemo() {
 		//set up the frame
