@@ -16,7 +16,7 @@ public class SchedulerExecutorServiceExample {
 	 // printing the current time 
         System.out.println("Current time : "+ Calendar.getInstance().get(Calendar.SECOND)); 
      // Scheduling the tasks 
-        for (int i = 10; i >= 0; i--) { 
+        for (int i = 10; i >= 0; i-=2) { 
             scheduler.schedule(new Task(i), 10 - i, TimeUnit.SECONDS); //Task, totalTime, timeType
         } 
      // remember to shutdown the scheduler so that it no longer accepts any new tasks 
