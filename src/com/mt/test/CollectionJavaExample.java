@@ -14,6 +14,8 @@ public class CollectionJavaExample {
 	
 	public static void main(String[] args) {
 		System.out.println("-----------ArrayList");
+		//ArrayList<int> myNumbers = new ArrayList<int>(); // Invalid
+		//ArrayList<Integer> myNumbers = new ArrayList<Integer>(); // Valid
 		ArrayList<String> list=new ArrayList<String>();//Creating arraylist  
 		list.add("Mojidul");//Adding object in arraylist  
 		list.add("Sharmin");  

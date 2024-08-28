@@ -3,6 +3,8 @@ package com.mt.test;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /*
 import java.awt.FlowLayout;
@@ -156,7 +158,14 @@ public class HelloWorld {
         myObj.setName("Mojidul Islam"); // Set the value of the name variable to "John"
         System.out.println(myObj.getName());
         
-        
+        Pattern pattern = Pattern.compile("w3schools", Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher("Visit W3Schools!");
+        boolean matchFound = matcher.find();
+        if(matchFound) {
+          System.out.println("Match found");
+        } else {
+          System.out.println("Match not found");
+        }
 		
 	}	
 	
